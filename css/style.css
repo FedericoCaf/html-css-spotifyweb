@@ -8,7 +8,7 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-.clearfix{
+.clearfix:after{
   content: "";
   display: table;
   clear: both;
@@ -34,8 +34,9 @@ header{
 
 #logo-mobile{
   width: 100%;
-  height: 35px;
+  height: 25px;
   display: none;
+  margin-top: 20px;
 }
 
 .btn button{
@@ -64,7 +65,7 @@ nav{
   height: 75px;
 }
 
-.header-nav li img {
+.header-nav li img, .footer-nav li img {
   height: 18px;
   vertical-align: middle;
   filter: invert(0.5);
@@ -103,11 +104,11 @@ h5{
   filter: brightness(300%);
 }
 
-
-
-.footer-nav li:first-child{
-  padding-bottom: 5px;
-  border-bottom: 1px solid #454545;
+.oriz-line{
+  width:87%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #646161;
 }
 
 .footer-nav li img{
@@ -124,12 +125,6 @@ main{
 }
 
 
-
-
-
-
-
-
 /* RESPONSIVE */
 
 @media (max-width:576px){
@@ -140,5 +135,40 @@ main{
   #logo-mobile{
     display: block;
   }
-}
+
+  nav, .logo{
+    width: 50px;
+  }
+
+  .main-nav{
+    visibility: hidden;
+  }
+
+  main{
+    width: calc(100% - 50px);
+  }
+
+  .header-nav li, .main-nav li, .footer-nav li{
+    margin: 0;
+  }
+  
+  nav span{
+    display: none;
+  }
+
+  nav li{
+    text-align: center;
+  }
+
+  nav .header-nav li img{
+    margin-bottom: 15px;
+  }
+
+nav .footer-nav li:first-child{
+  padding-bottom:10px;
+  }
+
+ .oriz-line{
+   display: none;
+  }
 
