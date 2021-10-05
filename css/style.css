@@ -1,0 +1,34 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #181821;
+  height: 70px;
+  line-height: 70px;
+}
+
+.logo{
+  width: 150px;
+  background-color: black;
+  padding: 14px
+}
+
+.btn button{
+  font-size: 8px;
+  padding: 10px 20px 10px 20px;
+  background-color:#181821;
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
