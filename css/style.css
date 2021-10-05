@@ -8,18 +8,34 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+.clearfix{
+  content: "";
+  display: table;
+  clear: both;
+}
+
 header{
+  height: 70px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #181821;
-  height: 70px;
-  line-height: 70px;
 }
 
 .logo{
   width: 150px;
+  height: 70px;
   background-color: black;
-  padding: 14px
+}
+
+#logo-desktop{
+  padding: 15px 15px 15px 8px;
+}
+
+#logo-mobile{
+  width: 100%;
+  height: 35px;
+  display: none;
 }
 
 .btn button{
@@ -30,5 +46,99 @@ header{
   border: 1px solid white;
   border-radius: 15px;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.container{
+  width: 100%;
+}
+
+nav{
+  width: 150px;
+  height: calc(100vh - 140px);  
+  background-color: black;
+  float: left;
+}
+
+.header-nav, .footer-nav{
+  height: 75px;
+}
+
+.header-nav li img {
+  height: 18px;
+  vertical-align: middle;
+  filter: invert(0.5);
+}
+
+.main-nav{
+  margin-top: 15px;
+  height: calc(100% - 150px);
+  overflow: auto;
+}
+
+.main-nav li .plus{
+  padding: 0 8px 0 8px;
+  background-color:#646161;
+  color: black;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+h5{
+  font-size: 11px;
+  color: white;
+  cursor:auto;
+}
+
+.header-nav li, .main-nav li, .footer-nav li{
+  margin: 5px 5px 10px 8px;
+  list-style:none;
+  font-size: 10px;
+  color: #646161;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-nav li:hover, .main-nav li:hover, .footer-nav li:hover{
+  filter: brightness(300%);
+}
+
+
+
+.footer-nav li:first-child{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #454545;
+}
+
+.footer-nav li img{
+  height: 14px;
+  vertical-align: middle;
+}
+
+main{
+  width: calc(100% - 150px);
+  height: calc(100vh - 140px);  
+  background-color: darkcyan;
+  float: left;
+  overflow: auto;
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width:576px){
+  #logo-desktop{
+    display: none;
+  }
+
+  #logo-mobile{
+    display: block;
+  }
 }
 
