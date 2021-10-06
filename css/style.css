@@ -105,9 +105,17 @@ h5{
 .header-nav li, .main-nav li, .footer-nav li{
   margin: 5px 5px 10px 8px;
   font-size: 10px;
-  cursor: pointer; 
   font-weight: bold;
 }
+
+.header-nav li, .main-nav li, main .menu ul li, .footer-nav li:not(#john-doe){
+  cursor: pointer;
+}
+
+#john-doe{
+  filter: brightness(300);
+}
+
 
 .main-nav li .plus{
   padding: 0 8px 0 8px;
@@ -118,7 +126,7 @@ h5{
 }
 
 
-.header-nav li:hover, .main-nav li:hover, .footer-nav li:hover{
+.header-nav li:hover, .main-nav li:hover, .footer-nav li:hover, main .menu ul li:hover{
   filter: brightness(300%);
 }
 
@@ -158,11 +166,20 @@ main .menu ul li{
 }
 
 h2{
-  padding-top: 30px;
+  padding-top: 50px;
   margin-left: 20px;
   color: white;
   font-size: 17px;
 }
+
+.subtitle{
+  margin-left: 20px;
+  margin-top: 5px;
+  color: #818289;
+  font-size: 8px;
+  font-weight: bold;
+}
+
 
 .album{
   display: flex;
@@ -171,12 +188,20 @@ h2{
   margin: 20px 20px 20px 20px;
 }
 
+.invisible{
+  visibility:hidden;
+}
+
 .box{
   width: 11.5vw;
   height: 11.5vw;
   background-color: red;
   flex-shrink: 0;
-  /* margin: 20px 5px; */
+}
+
+.box.radius{
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .box img{
@@ -205,10 +230,15 @@ h2{
   }
 
   .box{
-    width: 15.5vw;
-    height: 15.5vw;
+    width: 15.1vw;
+    height: 15.1vw;
     margin: 20px 3px;
   }
+
+.invisible.fifth, .invisible.sixth{
+  display: none;
+}
+
 }
 
 @media (max-width:576px){
@@ -223,6 +253,10 @@ h2{
     width: 37vw;
     height: 37vw;
     margin: 20px 3px;
+  }
+
+  .invisible.three, .invisible.four{
+    display: none;
   }
 
 
