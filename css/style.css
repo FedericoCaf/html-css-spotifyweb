@@ -8,81 +8,92 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-.clearfix:after{
+.clearfix::after{
   content: "";
   display: table;
   clear: both;
 }
 
-header{
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+li{
+  list-style: none;
+}
+
+.call-to-action{
+  width: calc(100% - 150px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 60px;
   background-color: #181821;
+  z-index: 999;
 }
 
-.logo{
-  width: 150px;
-  height: 70px;
-  background-color: black;
-}
-
-#logo-desktop{
-  padding: 15px 15px 15px 8px;
-}
-
-#logo-mobile{
-  width: 100%;
-  height: 25px;
-  display: none;
-  margin-top: 20px;
-}
-
-.btn button{
+.call-to-action button{
+  float: right;
   font-size: 8px;
   padding: 10px 20px 10px 20px;
   background-color:#181821;
   color: white;
   border: 1px solid white;
   border-radius: 15px;
-  margin-right: 10px;
+  cursor: pointer;
+  margin-top: 13px;
+  margin-right: 5px;
+}
+
+.call-to-action button:hover{
+  font-size: 9px;
+}
+
+.logo{
+ height: 60px;
+}
+
+#logo-desktop{
+  cursor: pointer;
+  width: 110px;
+  height: 50px;
+  margin-left: 8px;
+}
+
+#logo-mobile{
+  width: 23px;
+  height: 23px;
+  display: none;
   cursor: pointer;
 }
 
 .container{
   width: 100%;
+  height: 100vh;
 }
 
-nav{
+.aside{
   width: 150px;
-  height: calc(100vh - 140px);  
+  height: calc(100% - 60px);  
   background-color: black;
+  color: #726868;
   float: left;
+  overflow: hidden;
 }
 
-.header-nav, .footer-nav{
+.header-nav {
+  height: 135px;
+}
+
+.footer-nav{
   height: 75px;
 }
 
 .header-nav li img, .footer-nav li img {
   height: 18px;
   vertical-align: middle;
-  filter: invert(0.5);
 }
 
 .main-nav{
   margin-top: 15px;
-  height: calc(100% - 150px);
+  height: calc(100% - 210px);
   overflow: auto;
-}
-
-.main-nav li .plus{
-  padding: 0 8px 0 8px;
-  background-color:#646161;
-  color: black;
-  font-size: 20px;
-  vertical-align: middle;
 }
 
 h5{
@@ -93,12 +104,19 @@ h5{
 
 .header-nav li, .main-nav li, .footer-nav li{
   margin: 5px 5px 10px 8px;
-  list-style:none;
   font-size: 10px;
-  color: #646161;
+  cursor: pointer; 
   font-weight: bold;
-  cursor: pointer;
 }
+
+.main-nav li .plus{
+  padding: 0 8px 0 8px;
+  background-color:#646161;
+  color: black;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
 
 .header-nav li:hover, .main-nav li:hover, .footer-nav li:hover{
   filter: brightness(300%);
@@ -118,26 +136,116 @@ h5{
 
 main{
   width: calc(100% - 150px);
-  height: calc(100vh - 140px);  
-  background-color: darkcyan;
+  height: calc(100% - 60px);  
+  background-color: #23272F;
   float: left;
   overflow: auto;
+  padding-top:60px;
 }
+
+main .menu ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main .menu ul li{
+  margin-right: 15px;
+  margin-top:10px;
+  font-size: 10px;
+  color: #818289;
+  font-weight: bold;
+}
+
+h2{
+  padding-top: 30px;
+  margin-left: 20px;
+  color: white;
+  font-size: 17px;
+}
+
+.album{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  margin: 20px 20px 20px 20px;
+}
+
+.box{
+  width: 11.5vw;
+  height: 11.5vw;
+  background-color: red;
+  flex-shrink: 0;
+  /* margin: 20px 5px; */
+}
+
+.box img{
+  width: 100%;
+}
+
+.box h6{
+  text-align: center;
+  color:white;
+}
+
+.box p{
+  font-size: 8px;
+  color: #818289;
+  text-align: center;
+}
+
 
 
 /* RESPONSIVE */
 
+@media (max-width:780px){
+
+  .album{
+    justify-content:flex-start;
+  }
+
+  .box{
+    width: 15.5vw;
+    height: 15.5vw;
+    margin: 20px 3px;
+  }
+}
+
 @media (max-width:576px){
+
+  .album{
+    justify-content:center;
+    margin-left: 1px;
+    margin-right:1px;
+  }
+
+  .box{
+    width: 37vw;
+    height: 37vw;
+    margin: 20px 3px;
+  }
+
+
+  .call-to-action{
+    width: calc(100% - 50px);
+  }
+
+  .aside{
+    width: 50px;
+  }
+
+  .logo{
+    text-align: center;
+   }
+   
+
   #logo-desktop{
     display: none;
   }
 
   #logo-mobile{
-    display: block;
-  }
-
-  nav, .logo{
-    width: 50px;
+    display: inline-block;
+    margin-top: 15px;
   }
 
   .main-nav{
