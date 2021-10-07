@@ -25,6 +25,7 @@ li{
   right: 0;
   height: 60px;
   background-color: #181821;
+  opacity: 0.8;
   z-index: 999;
 }
 
@@ -39,7 +40,7 @@ li{
   border-radius: 15px;
   cursor: pointer;
   margin-top: 13px;
-  margin-right: 5px;
+  margin-right: 20px;
   transition: all 1s;
 
 }
@@ -407,7 +408,6 @@ footer{
   background-color: lime;
 }
 
-
 /* RESPONSIVE */
 
 @media (max-width:780px){
@@ -424,6 +424,10 @@ footer{
   /* bonus per far sparire i due album in piu */
   .five, .six{
     display: none;
+  }
+
+  h2{
+    padding-top:10px;
   }
 
 }
