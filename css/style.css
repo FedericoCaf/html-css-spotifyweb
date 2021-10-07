@@ -30,7 +30,7 @@ li{
 
 .call-to-action button{
   float: right;
-  font-size: 8px;
+  font-size: 10px;
   padding: 10px 20px 10px 20px;
   background-color:#181821;
   color: white;
@@ -42,7 +42,7 @@ li{
 }
 
 .call-to-action button:hover{
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .logo{
@@ -63,14 +63,18 @@ li{
   cursor: pointer;
 }
 
-.container{
+.wrap{
   width: 100%;
-  height: 100vh;
+  height:100vh;
+}
+
+.container{
+  height: calc(100% - 70px);
 }
 
 .aside{
   width: 150px;
-  height: calc(100% - 60px);  
+  height: 100%;  
   background-color: black;
   color: #726868;
   float: left;
@@ -91,20 +95,20 @@ li{
 }
 
 .main-nav{
-  margin-top: 15px;
+  padding-top: 40px;
   height: calc(100% - 210px);
   overflow: auto;
 }
 
 h5{
-  font-size: 11px;
+  font-size: 12px;
   color: white;
   cursor:auto;
 }
 
 .header-nav li, .main-nav li, .footer-nav li{
-  margin: 5px 5px 10px 8px;
-  font-size: 10px;
+  padding: 5px 5px 10px 8px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -116,7 +120,6 @@ h5{
   filter: brightness(300);
 }
 
-
 .main-nav li .plus{
   padding: 0 8px 0 8px;
   background-color:#646161;
@@ -125,13 +128,12 @@ h5{
   vertical-align: middle;
 }
 
-
 .header-nav li:hover, .main-nav li:hover, .footer-nav li:hover, main .menu ul li:hover{
   filter: brightness(300%);
 }
 
 .oriz-line{
-  width:87%;
+  width:85%;
   margin: 0 auto;
   height: 1px;
   background-color: #646161;
@@ -144,7 +146,7 @@ h5{
 
 main{
   width: calc(100% - 150px);
-  height: calc(100% - 60px);  
+  height: 100%;  
   background-color: #23272F;
   float: left;
   overflow: auto;
@@ -160,7 +162,7 @@ main .menu ul{
 main .menu ul li{
   margin-right: 15px;
   margin-top:10px;
-  font-size: 10px;
+  font-size: 12px;
   color: #818289;
   font-weight: bold;
 }
@@ -169,17 +171,16 @@ h2{
   padding-top: 50px;
   margin-left: 20px;
   color: white;
-  font-size: 17px;
+  font-size: 23px;
 }
 
 .subtitle{
   margin-left: 20px;
   margin-top: 5px;
   color: #818289;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: bold;
 }
-
 
 .album{
   display: flex;
@@ -193,32 +194,114 @@ h2{
 }
 
 .box{
-  width: 11.5vw;
-  height: 11.5vw;
-  background-color: red;
-  flex-shrink: 0;
+  width: 14%;
 }
 
-.box.radius{
+.box-img{
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.box-img .fa-play-circle{
+  position: absolute;
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  z-index: 999;
+  display: none;
+}
+
+.box-img.radius{
   border-radius: 50%;
   overflow: hidden;
 }
 
-.box img{
+.box-img img{
   width: 100%;
+}
+
+.box-img img:hover{
+  filter: brightness(0.5);
+}
+
+.box-img:hover > .fa-play-circle {
+  display: block;
 }
 
 .box h6{
   text-align: center;
   color:white;
+  font-size: 12px;
 }
 
 .box p{
-  font-size: 8px;
+  font-size: 10px;
   color: #818289;
   text-align: center;
 }
 
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color:#282828;
+}
+
+.footer-left, .footer-right{
+ display: flex;
+ justify-content: left;
+ align-items: center;
+ width: 150px;
+ height: 60%;
+}
+
+.footer-left{
+  padding-left: 8px;
+}
+
+.footer-center{
+  width: calc(100% - 300px);
+  height: 60%;
+  background-color: darkmagenta;
+}
+
+.player-img{
+  height: 100%;
+  width: 30%;
+  background-color: red;
+}
+
+.player-img img{
+  width: 100%;
+}
+
+.player-title{
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 10px;
+}
+
+.player-subtitle{
+  color:lightgray;
+  font-size: 8px;
+  margin-left: 5px;
+}
+
+.player-icon{
+  margin-left: 10px;
+  text-align: center;
+  color:lightgray;
+}
+
+/* .heart .fa-heart, .folder .fa-folder{
+  width: 100%;
+} */
 
 
 /* RESPONSIVE */
@@ -230,14 +313,13 @@ h2{
   }
 
   .box{
-    width: 15.1vw;
-    height: 15.1vw;
+    width: 23%;
     margin: 20px 3px;
   }
 
-.invisible.fifth, .invisible.sixth{
-  display: none;
-}
+  .invisible.five, .invisible.six{
+    display: none;
+  }
 
 }
 
@@ -250,8 +332,7 @@ h2{
   }
 
   .box{
-    width: 37vw;
-    height: 37vw;
+    width: 45%;
     margin: 20px 3px;
   }
 
@@ -314,3 +395,10 @@ nav .footer-nav li:first-child{
    display: none;
   }
 
+  }
+
+  @media (max-width:400px){
+    .box{
+      width: 80%;
+    }
+  }
