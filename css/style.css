@@ -86,7 +86,7 @@ li{
 }
 
 .header-nav {
-  height: 135px;
+  height: 155px;
 }
 
 .footer-nav{
@@ -99,8 +99,8 @@ li{
 }
 
 .main-nav{
-  padding-top: 40px;
-  height: calc(100% - 210px);
+  margin-top: 40px;
+  height: calc(100% - 270px);
   overflow: auto;
 }
 
@@ -150,7 +150,7 @@ h5{
 
 main{
   width: calc(100% - 150px);
-  height: 100%;  
+  height: 100%;
   background-color: #23272F;
   float: left;
   overflow: auto;
